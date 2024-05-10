@@ -1,0 +1,101 @@
+---
+import Navbar from "../components/Navbar.astro";
+import ShuffleText from "../components/ShuffleText.astro";
+import Start from "../components/Start.astro";
+import SocialButtons from "../components/SocialButtons.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Boxesneo from "../components/Boxesneo.astro";
+import Herotext from "../components/Herotext.astro";
+import Exp from "../components/Exp.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+		/>
+
+		<title>Neo web</title>
+	</head>
+
+	<body>
+		
+		<header>
+			<nav><Navbar /></nav>
+		</header>
+
+		<main>
+			<section>
+				
+					<ShuffleText />
+					<SocialButtons />
+					<Start />
+				
+			</section>
+
+			<section>
+				
+				<AboutMe />
+			
+			</section>
+
+			<section class="xp" id="exp">
+				<Herotext />
+				<Exp />
+				
+			</section>
+			<section>
+				<Boxesneo />
+			</section>
+		</main>
+		<footer>
+			<Footer />
+		</footer>
+	</body>
+</html>
+
+<style>
+	
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+	html {
+		background-color: rgb(16 21 29);
+		scroll-behavior: smooth;
+		scrollbar-color: #4a5360 #1e2228;
+		background-image: radial-gradient(
+            200px 100px at 50% 0,
+            #131f33 20%,
+            rgba(19, 30, 49, 0) 100%
+        );
+	}
+	body {
+		font-family:
+			Google Sans Text,
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			Segoe UI,
+			Roboto,
+			Helvetica Neue,
+			Arial,
+			Noto Sans,
+			sans-serif,
+			"Apple Color Emoji",
+			"Segoe UI Emoji",
+			Segoe UI Symbol,
+			"Noto Color Emoji";
+	}
+	
+	
+</style>
+

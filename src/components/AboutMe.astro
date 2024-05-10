@@ -1,0 +1,262 @@
+---
+
+---
+
+<div class="gat" id="about"></div>
+
+<div class="conteiner" id="aboutme">
+    <div class="aboutme-box" id="flex-sec">
+        <article>
+            <h2 class="cell-shuffle">About Me</h2>
+            <p>
+                Hi, I'm Eduardo Lizalde. <br>I'm 27 years old.<br>I'm from
+                Guadalajara, Jalisco. <br>Recently graduated from the Instituto Tecnológico del Altiplano de Tlaxcala in Information and Communication Technologies Engineering.
+            </p>
+        </article>
+    </div>
+
+    <div class="second-box" id="flex-sec2">
+        <div class="skill-box">
+            <div class="container-skills">
+                <div class="box-text">
+                    <h2>Work With</h2>
+                </div>
+
+                <div class="row">
+                    <div class="box">
+                        <img src="html.png" alt="" /><a href="">Html</a>
+                    </div>
+                    <div class="box">
+                        <img src="css.svg" alt="" /><a href="">Css</a>
+                    </div>
+                    <div class="box">
+                        <img src="js.svg" alt="" /><a href="">JavaScript</a>
+                    </div>
+                    <div class="box">
+                        <img src="astro.svg" alt="" /><a href="">Astro</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">
+                        <img src="react.svg" alt="" /><a href="">React</a>
+                    </div>
+                    <div class="box">
+                        <img src="angular.svg" alt="" /><a href="">Angular</a>
+                    </div>
+                    <div class="box">
+                        <img src="laravel.svg" alt="" /><a href="">Laravel</a>
+                    </div>
+                    <div class="box">
+                        <img src="tail.svg" alt="" /><a href="">Tailwind Css</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aditional-text">Aditional Skills</div>
+            <div class="row">
+                <div class="box">
+                    <img src="excel.svg" alt="" /><a href="">Excel</a>
+                </div>
+                <div class="box">
+                    <img src="word.svg" alt="" /><a href="">Word</a>
+                </div>
+                <div class="box">
+                    <img src="photoshop.svg" alt="" /><a href="">Photoshop</a>
+                </div>
+                <div class="box">
+                    <img src="fl studio.svg" alt="" /><a href="">Fl Studio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .conteiner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    .aboutme-box {
+        width: 25rem;
+        height: 20rem;
+        background: #10151d;
+        border: 1px solid;
+        border-right: none;
+        border-color: #3d4c64;
+    }
+    article {
+      
+       
+        color: rgb(128 140 156);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 3rem;
+    }
+    p{
+        margin-top: 1rem;
+       
+    }
+
+    article h2 {
+        position: relative;
+        padding: 1rem 0rem 1rem 0rem;
+        font-size: 32px;
+        font-weight: 500;
+        color: #bfc7d2;
+    }
+
+    .second-box {
+        display: flex;
+        background: #10151d;
+        justify-content: center;
+        height: 40vw;
+        width: 60vw;
+        align-items: center;
+        border: 1px solid;
+        border-radius: 2px;
+        border-color: #3d4c64;
+        background-image: radial-gradient(
+            200px 100px at 50% 0,
+            #131f33 20%,
+            rgba(19, 30, 49, 0) 100%
+        );
+    }
+    .container-skills {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+    }
+
+    .box {
+        height: 8vw;
+        width: 8vw;
+        border: 1px solid;
+        border-color: #3d4c64;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 5px;
+    }
+    .box:hover,
+    :focus {
+        color: #ffffff;
+        background: #32a6ff2b;
+        transition: 0.5s ease;
+        border: 1px solid #008cff;
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #ffffff,
+            0 0 20px #ffffff;
+        box-shadow:
+            0 0 5px #008cff,
+            0 0 20px #008cff,
+            0 0 50px #008cff,
+            0 0 100px #008cff;
+    }
+
+    a {
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: 1vw;
+        font-weight: 00;
+        color: white;
+    }
+    img {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .skill-box {
+        padding: 2vw;
+        background: #10151d;
+        border: 1px solid;
+        border-radius: 5px;
+        border-color: #3d4c64ba;
+        box-shadow:
+            0 0 50px 0px rgba(114, 20, 245, 0.052),
+            0 0 100px 3px #5190c43b;
+    }
+    .box-text h2 {
+        cursor: pointer;
+        font-size: 1vw;
+        display: inline;
+        
+        color: #bfc7d2;
+        font-weight: 600;
+    }
+    .aditional-text {
+        position: relative;
+        left: 1px;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        font-size: 1vw;
+        color: #bfc7d2;
+        font-weight: 600;
+    }
+
+    #about {
+        position: relative;
+        top: -7rem;
+    }
+
+    @media screen and (max-width: 750px) {
+        .conteiner {
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+        }
+
+        .aboutme-box {
+            width: 22rem;
+            border-top: none;
+            border-right: 1px solid;
+            border-color: #3d4c64;
+        }
+        .second-box {
+            height: 20rem;
+            width: 22rem;
+        }
+        .box {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        img {
+            width: 2vw;
+            height: 2vw;
+        }
+    }
+</style>
+
+<script>
+    //const cuadro = document.querySelector(".cuadro-skl");
+    //cuadro.style.opacity = "0";
+    //cuadro.style.transform = "translateY(100px)";
+    //cuadro.style.transition = "all 1s";
+
+    //window.addEventListener("scroll", () => {
+    //    let scroll = window.scrollY;
+    //    let offset = cuadro.offsetTop;
+    //    let height = window.innerHeight;
+    //    let cuadroHeight = cuadro.clientHeight;
+
+    //    if (scroll > offset - height + cuadroHeight) {
+    //        cuadro.style.opacity = "5";
+    //        cuadro.style.transform = "translateY(0px)";
+    //    }
+    //});
+</script>

@@ -1,0 +1,258 @@
+<div class="container">
+<div class="cells-neo" id="cells-neo">
+	<button class="cell-shuffle-1" id="flex-cell">I'</button>
+	<button class="cell-shuffle-1" id="flex-cell">m</button>
+	<button class="cell-shuffle-1" id="flex-cell-6"></button>
+
+	<button class="cell-shuffle-1" id="flex-cell">E</button>
+	<button class="cell-shuffle-1" id="flex-cell">d</button>
+	<button class="cell-shuffle-1" id="flex-cell">u</button>
+	<button class="cell-shuffle-1" id="flex-cell">a</button>
+	<button class="cell-shuffle-1" id="flex-cell">r</button>
+	<button class="cell-shuffle-1" id="flex-cell">d</button>
+	<button class="cell-shuffle-1" id="flex-cell">o</button>
+	<button class="cell-shuffle" id="flex-cell-5">Lizalde</button>
+	<button class="cell-shuffle" id="flex-cell-1">Web</button>
+	<button class="cell-shuffle" id="flex-cell-1">developer</button>
+	<button class="cell-shuffle" id="flex-cell-2">Welcome</button>
+	<button class="cell-shuffle" id="flex-cell-3">!!</button>
+	<button class="cell-shuffle" id="flex-cell-4"
+		>let's create something comforting</button
+	>
+</div>
+</div>
+<style>
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		
+	}
+	.cell-shuffle-1 {
+		color: #bdc5cf;
+		text-transform: uppercase;
+		background-color: rgba(0, 0, 0, 0);
+		
+		border: 1px solid #3d4c64;
+	}
+
+	.cells-neo {
+		position: absolute;
+	
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+
+		flex-wrap: wrap;
+	}
+
+	.cell-shuffle {
+		color: #bdc5cf;
+		text-transform: uppercase;
+		background-color: rgba(0, 0, 0, 0);
+		
+		border: 1px solid #3d4c64;
+	}
+
+	#flex-cell {
+		color: #ffffff;
+		margin: 2px;
+		text-align: center;
+		flex-grow: 1;
+		white-space: nowrap;
+		flex-basis: 5vw;
+		font-size: 2vw;
+		max-width: 8vh;
+	}
+
+	#flex-cell {
+		animation:
+			animated-text 1s steps(29, end) 1s 1 normal both,
+			animated-cursor 600ms steps(29, end) infinite;
+	}
+	#flex-cell-1 {
+		color: #ffffff;
+		margin: 2px;
+		flex-grow: 5;
+		white-space: nowrap;
+		flex-basis: 5vw;
+		font-size: 2vw;
+		padding: 1vh;
+	}
+	#flex-cell-2 {
+		margin: 2px;
+		flex-grow: 1;
+		color: #477eea;
+		flex-basis: 10vw;
+		font-weight: 700;
+		font-size: 1.5vw;
+		padding: 1vw;
+	}
+	#flex-cell-3 {
+		margin: 2px;
+		flex-grow: 2;
+		color: #3cd23a;
+		flex-basis: 2vh;
+		font-weight: 700;
+		font-size: 2vw;
+		padding: 1vw;
+	}
+	#flex-cell-4 {
+		margin: 2px;
+		flex-grow: 5;
+		flex-basis: 50vh;
+		font-size: 2vw;
+		padding: 2vh;
+		transition: all 0.5s;
+		
+	}
+
+	#flex-cell-4:hover {
+		color: #b895fd;
+		transition: all 0.5s;
+		transform: scale(1.1);
+	}
+	#flex-cell-5 {
+		margin: 2px;
+		flex-grow: 1;
+		flex-basis: 5vh;
+		font-size: 1vw;
+		font-weight: 700;
+		padding: 2vh;
+	}
+
+	#flex-cell-6 {
+		color: #f0e768;
+		margin: 2px;
+		text-align: center;
+		flex-grow: 1;
+		white-space: nowrap;
+		flex-basis: 1vw;
+		font-size: 2vw;
+		font-weight: 900;
+		max-width: 7vh;
+	}
+
+	
+
+
+</style>
+
+<script>
+
+	const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+
+	var Glitch = function (
+		selector,
+		index,
+		numberOfGlitchedLetter,
+		timeGlitch,
+		timePerLetter,
+		timeBetweenGlitch,
+	) {
+		this.selector = selector;
+		this.index = index;
+		this.numberOfGlitchedLetter = numberOfGlitchedLetter;
+		this.innerText;
+		this.charArray = [];
+		this.charIndex = [];
+		this.timeGlitch = timeGlitch;
+		this.timeBetweenGlitch = timeBetweenGlitch;
+		this.timePerLetter = timePerLetter;
+		this.maxCount = Math.floor(this.timeGlitch / this.timePerLetter);
+		this.count = 0;
+	};
+
+	Glitch.prototype.init = function () {
+		this.innerText = this.selector.innerText;
+		this.charArray = this.innerText.split("");
+		if (
+			this.numberOfGlitchedLetter == undefined ||
+			this.numberOfGlitchedLetter > this.innerText.length
+		) {
+			this.numberOfGlitchedLetter = this.innerText.length;
+		}
+		this.defineCharIndexToRandomize();
+	};
+
+	Glitch.prototype.defineCharIndexToRandomize = function () {
+		this.charIndex = [];
+		for (let i = 0; i < this.numberOfGlitchedLetter; i++) {
+			let randCharIndex = Math.floor(
+				Math.random() * this.charArray.length,
+			);
+			this.charIndex.push(randCharIndex);
+		}
+	};
+
+	Glitch.prototype.randomize = function () {
+		//copy the char array
+		let randomString = Array.from(this.charArray);
+
+		//randomize char
+		for (let i = 0; i < this.numberOfGlitchedLetter; i++) {
+			let randIndex = Math.floor(Math.random() * chars.length);
+			let randCharIndex = this.charIndex[i];
+			if (randomString[randCharIndex] !== " ") {
+				randomString[randCharIndex] = chars[randIndex];
+			}
+		}
+		this.selector.innerText = randomString.join("");
+	};
+
+	Glitch.prototype.update = function (interval) {
+		if (this.count >= this.maxCount - 1) {
+			this.selector.innerText = this.innerText;
+			this.defineCharIndexToRandomize();
+			let ctx = this;
+			let wait = setTimeout(function () {
+				ctx.count = 0;
+			}, this.timeBetweenGlitch);
+		} else {
+			this.randomize();
+			this.count++;
+		}
+	};
+
+	Glitch.prototype.glitch = function () {
+		let ctx = this;
+		let interval = setInterval(function () {
+			ctx.update(this);
+		}, this.timePerLetter);
+	};
+
+	var arrayElements;
+	var glitchArray = [];
+
+	function initAllGlitch() {
+		arrayElements = document.querySelectorAll(".cell-shuffle");
+		for (let i = 0; i < arrayElements.length; i++) {
+			let selector = arrayElements[i];
+			let randLetterNumber = 2 + Math.floor(Math.random() * 8);
+			let randGlitchTime = 500 + Math.floor(Math.random() * 2500);
+			let randGlitchPauseTime = 500 + Math.floor(Math.random() * 2500);
+			let glitch = new Glitch(
+				selector,
+				i,
+				randLetterNumber,
+				200,
+				65,
+				randGlitchPauseTime,
+			);
+			glitch.init();
+			glitchArray.push(glitch);
+		}
+	}
+
+	function update() {
+		for (let i = 0; i < glitchArray.length; i++) {
+			let glitch = glitchArray[i];
+			glitch.glitch();
+		}
+	}
+
+	initAllGlitch();
+	update();
+</script>
+

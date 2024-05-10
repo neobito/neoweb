@@ -1,0 +1,222 @@
+---
+
+---
+
+
+<div id="container">
+ 
+    <div class="herotext" id="first">
+      
+        <h2>Projects</h2>
+      <p>Something Comforting</p>
+    </div>
+    <div class="herotext" id="second">
+        <h2>Experience</h2>
+        <p>Look at the sky</p>
+    </div>
+    <div class="herotext" id="third">
+        <h2>Learning</h2>
+        <p>Unfold</p>
+    </div>
+  </div>
+<div class="text">
+  <p>
+    ➤ My focus in web application design revolves around usability, aesthetics, and user experience, always striving to exceed expectations and create innovative solutions. <br><br>
+    ➤ I have a strong experience and expertise in HTML, CSS, and JavaScript, enabling me to create attractive and functional interfaces.<br><br>
+    ➤ My favorite thing to do is design web applications, where I can blend my creativity with my technical skills.<br><br></p>
+</div>
+  <style>
+  
+.text{
+  font-size: 1rem;
+  
+width: 25rem;
+
+  margin: 0 auto;
+            color: rgb(128 140 156);
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            
+            
+
+}
+
+#container {
+  width: 100%;
+  height: 10rem;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  
+  
+}
+#container .herotext {
+  color: #fff;
+  text-transform: uppercase;
+
+  visibility: hidden;
+  opacity: 0;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+#container .herotext h2 {
+  font-size: 3em;
+}
+#container #first {
+  -webkit-animation: fade-first 10s linear infinite;
+          animation: fade-first 10s linear infinite;
+}
+#container #second {
+  -webkit-animation: fade-second 10s linear infinite;
+          animation: fade-second 10s linear infinite;
+}
+#container #third {
+  -webkit-animation: fade-third 10s linear infinite;
+          animation: fade-third 10s linear infinite;
+}
+
+@-webkit-keyframes fade-first {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  3% {
+    opacity: 1;
+    visibility: visible;
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-first {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  3% {
+    opacity: 1;
+    visibility: visible;
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes fade-second {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  36% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63% {
+    opacity: 1;
+    visibility: visible;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fade-second {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  36% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63% {
+    opacity: 1;
+    visibility: visible;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes fade-third {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  69% {
+    opacity: 1;
+    visibility: visible;
+  }
+  96% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fade-third {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  69% {
+    opacity: 1;
+    visibility: visible;
+  }
+  96% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+  </style>
