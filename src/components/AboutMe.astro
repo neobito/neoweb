@@ -77,6 +77,9 @@
         display: flex;
         justify-content: center;
         color: white;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+       
     }
 
     .aboutme-box {
@@ -238,22 +241,3 @@
     }
 </style>
 
-<script>
-    const cuadro = document.querySelector(".skill-box");
-    
-    cuadro.style.opacity = "0";
-    cuadro.style.transform = "translateY(100px)";
-    cuadro.style.transition = "all 1s";
-
-    window.addEventListener("scroll", () => {
-       let scroll = window.scrollY;
-        let offset = cuadro.offsetTop;
-       let height = window.innerHeight;
-       let cuadroHeight = cuadro.clientHeight;
-
-      if (scroll > offset - height + cuadroHeight) {
-           cuadro.style.opacity = "5";
-            cuadro.style.transform = "translateY(0px)";
-        }
-    });
-</script>
