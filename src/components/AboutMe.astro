@@ -193,7 +193,7 @@
     .box-text h2 {
         cursor: pointer;
         font-size: 1vw;
-        display: inline;
+        margin-bottom: 0.200vw;
         
         color: #bfc7d2;
         font-weight: 600;
@@ -227,8 +227,8 @@
             width: 22rem;
         }
         .box {
-            height: 3rem;
-            width: 3rem;
+            height: 3.5rem;
+            width: 3.5rem;
         }
 
         img {
@@ -239,20 +239,21 @@
 </style>
 
 <script>
-    //const cuadro = document.querySelector(".cuadro-skl");
-    //cuadro.style.opacity = "0";
-    //cuadro.style.transform = "translateY(100px)";
-    //cuadro.style.transition = "all 1s";
+    const cuadro = document.querySelector(".skill-box");
+    
+    cuadro.style.opacity = "0";
+    cuadro.style.transform = "translateY(100px)";
+    cuadro.style.transition = "all 1s";
 
-    //window.addEventListener("scroll", () => {
-    //    let scroll = window.scrollY;
-    //    let offset = cuadro.offsetTop;
-    //    let height = window.innerHeight;
-    //    let cuadroHeight = cuadro.clientHeight;
+    window.addEventListener("scroll", () => {
+       let scroll = window.scrollY;
+        let offset = cuadro.offsetTop;
+       let height = window.innerHeight;
+       let cuadroHeight = cuadro.clientHeight;
 
-    //    if (scroll > offset - height + cuadroHeight) {
-    //        cuadro.style.opacity = "5";
-    //        cuadro.style.transform = "translateY(0px)";
-    //    }
-    //});
+      if (scroll > offset - height + cuadroHeight) {
+           cuadro.style.opacity = "5";
+            cuadro.style.transform = "translateY(0px)";
+        }
+    });
 </script>
