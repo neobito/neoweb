@@ -2,25 +2,259 @@
 
 ---
 
-<div>
-  <div class="footer">
-    <div class="contenido-texto">
-      <div class="contenedor-principal">
-        <h1>¡Copiando contenido al portapapeles con JS</h1>
-        <div class="contenido-texto">
-          <p>gatitos</p>
-        </div>
-        <div class="contenedo-btnCopy">
-          <button id="btn-copy">
-            Copiar al portapapeles
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
 
-        <div class="mensaje-copy">
-          <p>¡Copiado al portapapeles!</p>
-        </div>
+<footer>
+  <div class="container">
+      <div class="row">
+            <div class="col" id="company">
+                <img src="images/logo.png" alt="" class="logo">
+                <p>
+                  I am Eduardo Lizalde, and I look forward to helping you in future projects.
+                </p>
+                <div class="social">
+                 
+                  <a href="https://github.com/neobito"><i><img src="github.svg" alt=""></i></a>
+                  <a href="https://www.linkedin.com/in/neolizande/"><i><img src="linkedin.svg" alt=""></i></a>
+                  <a href="https://www.youtube.com/@15109carlos"><i><img src="youtube.svg" alt=""></i></a>
+                  <a href="https://www.instagram.com/neo_0_0_/"><i><img src="instagram.svg" alt=""></i></a>
+                 
+                </div>
+            </div>
+
+
+            <div class="col" id="services">
+               <h3>Services</h3>
+               <div class="links">
+                  <a>Backend</a>
+                  <a>Apps</a>
+                  <a>Interface</a>
+                  <a>Logo Design</a>
+               </div>
+            </div>
+
+            <div class="col" id="useful-links">
+               <h3>Links</h3>
+               <div class="links">
+                  <a href="#about">About Me</a>
+                  <a href="#projects">Projects</a>
+                  <a href="#exp">Experience</a>
+                  <a href="#">Home</a>
+               </div>
+            </div>
+
+            <div class="col" id="contacts">
+                <h3>Contact</h3>
+                <div class="contact-details">
+                  
+                   <i class="fa fa-at"></i>
+                   <p>nexusneolife@gmail.com</p><br><br>
+                </div>
+                <div class="contact-details">
+                   <i class="fa fa-phone"></i>
+                   <p>+52-776-118-1183</p><br><br><br>
+                </div>
+                <button class="button">
+                  <a href="mailto:nexusneolife@gmail.com"><span class="button-content">Contact Me</span></a>
+                </button>
+            </div>
       </div>
-    </div>
+
+
   </div>
+</footer>
+ 
+  <style>
+
+    .button {
   
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+ 
+  background: #3d3a4e;
+ 
+  background-size: 400%;
+  
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+span{
+  color: white;
+  text-decoration: none;
+  
+}
+
+
+footer{
+  
+  background-color: rgba(0, 0, 0, 0.123);
+     position: relative;
+  
+     min-height: 250px;
+     padding: 3rem 1rem;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col{
+    min-width: 250px;
+    color:#f2f2f2f2;
+    font-weight: 400;
+   
+    padding:0 2rem;
+   
+}
+
+.col h3{
+  
+  color: #b38df6;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.col .social a i img{
+ border: 1px solid ;
+    color:rgb(255, 255, 255);
+   width: 35px;
+   padding: 0.350rem;
+    margin-top:2rem;
+    
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+
+
+.col .social a i img:hover{
+  border: 1px solid #008cff;
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #ffffff,
+            0 0 20px #ffffff;
+        box-shadow:
+            0 0 5px #008cff,
+            0 0 20px #008cff,
+            0 0 50px #008cff,
+            0 0 100px #008cff;
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    border-color: ;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+    border: 1px solid #3d4c64;
+ padding: 1rem;
+}
+.col .links a::before{
+    content:'';
+    height: 35px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: #b38df6;
+    transition: 0.5s ease;
+    opacity: 0;
+    
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:#b38df6;
+    
+}
+#contacts{
+ position: relative;
+ top: 1.3rem;
+ border: 1px solid;
+ border-color: #3d4c64;
+ padding: 1rem;
+}
+.col .contact-details{
+
+    display: inline-flex;
+    justify-content: space-between;
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+
+
+
+/********** Responsive Design ********/
+@media(max-width:900px)
+{
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+@media(max-width:768px)
+{
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+  
+  </style>

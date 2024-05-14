@@ -16,10 +16,13 @@ import Footer from "../components/Footer.astro";
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="icon" href="icon.svg" type="image/svg+xml">
 
 		<title>Neo web</title>
 	</head>
@@ -40,22 +43,29 @@ import Footer from "../components/Footer.astro";
 			</section>
 
 			<section>
+				<div class="about" id="about"></div>
 				
 				<AboutMe />
-			
+		
 			</section>
 
-			<section class="xp" id="exp">
+			<section>
+				<div class="projects" id="projects"></div>
 				<Herotext />
-				<Exp />
+				<Boxesneo />
+			
 				
 			</section>
 			<section>
-				<Boxesneo />
+				<div class="exp" id="exp"></div>
+				<Exp />
+			
 			</section>
 		</main>
 		<footer>
+			<div class="contact" id="contact"></div>
 			<Footer />
+		
 		</footer>
 	</body>
 </html>
@@ -65,8 +75,10 @@ import Footer from "../components/Footer.astro";
 	* {
 		box-sizing: border-box;
 		padding: 0;
+		
 		margin: 0;
 	}
+	
 	html {
 		background-color: rgb(16 21 29);
 		scroll-behavior: smooth;
@@ -77,6 +89,7 @@ import Footer from "../components/Footer.astro";
             rgba(19, 30, 49, 0) 100%
         );
 	}
+	
 	body {
 		font-family:
 			Google Sans Text,
@@ -95,7 +108,18 @@ import Footer from "../components/Footer.astro";
 			Segoe UI Symbol,
 			"Noto Color Emoji";
 	}
+	.about {
+		position: relative;
+		top:-120px;
+	}
 	
-	
+	.projects{
+		position: relative;
+		top:-70px;
+	}
+	.exp{
+		position: relative;
+		top:-120px;
+	}
 </style>
 
