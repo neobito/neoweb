@@ -11,9 +11,9 @@
 	<button class="cell-shuffle-1" id="flex-cell">r</button>
 	<button class="cell-shuffle-1" id="flex-cell">d</button>
 	<button class="cell-shuffle-1" id="flex-cell">o</button>
-	<button class="cell-shuffle" id="flex-cell-5">Lizalde</button>
-	<button class="cell-shuffle" id="flex-cell-1">Web</button>
-	<button class="cell-shuffle" id="flex-cell-1">developer</button>
+	<button class="cell-shuffle-p" id="flex-cell-5">Lizalde</button>
+	<button class="cell-shuffle-p" id="flex-cell-1">Web</button>
+	<button class="cell-shuffle-p" id="flex-cell-1">developer</button>
 	<button class="cell-shuffle" id="flex-cell-2">Welcome</button>
 	<button class="cell-shuffle" id="flex-cell-3">!!</button>
 	<button class="cell-shuffle" id="flex-cell-4"
@@ -22,6 +22,14 @@
 </div>
 </div>
 <style>
+
+	.cell-shuffle-p{
+		color: #bdc5cf;
+		text-transform: uppercase;
+		background-color: rgba(0, 0, 0, 0);
+		
+		border: 1px solid #3d4c64;
+	}
 	.container {
 		display: flex;
 		justify-content: center;
@@ -103,7 +111,7 @@ top: 30%;
 		flex-grow: 5;
 		flex-basis: 50vh;
 		font-size: 2vw;
-		padding: 2vh;
+		padding: 2vw;
 		transition: all 0.5s;
 		
 	}
@@ -237,7 +245,7 @@ top: 30%;
 				i,
 				randLetterNumber,
 				200,
-				65,
+				85,
 				randGlitchPauseTime,
 			);
 			glitch.init();
