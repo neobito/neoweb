@@ -72,13 +72,15 @@
     }
     .cuadro-1 {
         padding: 3rem;
-        max-width: 15rem;
-       
+        width: 15rem;
+        height: 26rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
         background-color: #0e151f;
         border: 1px solid;
         border-color: #3d4c64;
         color: rgb(128 140 156);
-        font-size: 1.6vh;
+        font-size: 0.900rem;
         line-height: 1.25rem;
         transition: 0.5s;
     }
@@ -103,13 +105,14 @@
         font-weight: 500;
         color: #bfc7d2;
     }
+   
 
    
     .repository {
         margin-top: 1rem;
         color: #b38df6;
         text-decoration: none;
-        padding: 0.300rem 0.700rem;
+        padding: 0.300vw 0.700vw;
         border-radius: 5px;
         
         font-size: 0.900rem;
@@ -124,17 +127,15 @@
         transition: 0.5s;
         
     }
-    
+
+
 @media screen and (max-width: 750px) {
     .conteiner-box{
         align-items: center;
         flex-direction: column;
+     
 
 
-      
-        
-        
-       
     }
 }
 
